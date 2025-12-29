@@ -41,6 +41,15 @@ header{
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   box-shadow: 0 10px 22px rgba(110,231,255,.15);
 }
+
+.logoImg{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  object-fit:contain;
+  box-shadow: 0 10px 22px rgba(110,231,255,.15);
+}
+
 .navlinks{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
 .navlinks a{
   padding:8px 10px; border-radius:12px;
