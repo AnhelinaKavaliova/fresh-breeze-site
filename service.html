@@ -1,111 +1,111 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Услуга — Fresh Breeze</title>
-  <meta name="description" content="Подробности услуги клининга и онлайн-заявка.">
-  <link rel="stylesheet" href="styles.css" />
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Услуга — Fresh Breeze</title>
+ <meta name="description" content="Подробности услуги клининга и онлайн-заявка.">
+ <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="service">
 <header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="index.html" aria-label="Fresh Breeze">
-        <span class="logo" aria-hidden="true"></span>
-        <span>Fresh Breeze</span>
-      </a>
-      <nav class="navlinks" aria-label="Навигация">
-        <a data-nav href="index.html">Главная</a>
-        <a data-nav href="services.html">Услуги</a>
-        <a data-nav href="contacts.html">Контакты</a>
-        <a class="btn small primary" href="contacts.html#order" id="cta_top">Заказать уборку</a>
-      </nav>
-    </div>
-  </div>
+ <div class="container">
+ <div class="nav">
+ <a class="brand" href="index.html" aria-label="Fresh Breeze">
+ <span class="logo" aria-hidden="true"></span>
+ <span>Fresh Breeze</span>
+ </a>
+ <nav class="navlinks" aria-label="Навигация">
+ <a data-nav href="index.html">Главная</a>
+ <a data-nav href="services.html">Услуги</a>
+ <a data-nav href="contacts.html">Контакты</a>
+ <a class="btn small primary" href="contacts.html#order" id="cta_top">Заказать уборку</a>
+ </nav>
+ </div>
+ </div>
 </header>
 
 <main class="container">
-  <div class="breadcrumbs"><a href="index.html">Главная</a> → <a href="services.html">Услуги</a> → Детали</div>
+ <div class="breadcrumbs"><a href="index.html">Главная</a> → <a href="services.html">Услуги</a> → Детали</div>
 
-  <section class="pageTitle">
-    <h1 id="serviceTitle">Генеральная уборка</h1>
-    <p id="serviceDesc">Описание услуги будет подставлено автоматически.</p>
-  </section>
+ <section class="pageTitle">
+ <h1 id="serviceTitle">Генеральная уборка</h1>
+ <p id="serviceDesc">Описание услуги будет подставлено автоматически.</p>
+ </section>
 
-  <section class="split">
-    <div class="card list">
-      <div class="sectionTitle" style="margin-bottom:0;">
-        <h2>Что входит</h2>
-        <p id="servicePrice" style="font-weight:800;color:#e9eefc;">от 199 zł</p>
-      </div>
-      <ul id="serviceBullets"></ul>
-      <div class="hr"></div>
-      <div class="mini">Точную стоимость уточним по площади, сложности и дополнительным опциям.</div>
-      <div style="margin-top:12px;">
-        <a class="btn primary" href="contacts.html#order" id="cta_service_order">Заказать эту услугу</a>
-        <a class="btn" href="services.html" id="cta_back">Назад к услугам</a>
-      </div>
-    </div>
+ <section class="split">
+ <div class="card list">
+ <div class="sectionTitle" style="margin-bottom:0;">
+ <h2>Что входит</h2>
+ <p id="servicePrice" style="font-weight:800;color:#e9eefc;">от 199 BYN</p>
+ </div>
+ <ul id="serviceBullets"></ul>
+ <div class="hr"></div>
+ <div class="mini">Точную стоимость уточним по площади, сложности и дополнительным опциям.</div>
+ <div style="margin-top:12px;">
+ <a class="btn primary" href="contacts.html#order" id="cta_service_order">Заказать эту услугу</a>
+ <a class="btn" href="services.html" id="cta_back">Назад к услугам</a>
+ </div>
+ </div>
 
-    <div class="card form" id="order">
-      <div class="sectionTitle">
-        <h2>Быстрая заявка</h2>
-        <p>Без регистрации</p>
-      </div>
+ <div class="card form" id="order">
+ <div class="sectionTitle">
+ <h2>Быстрая заявка</h2>
+ <p>Без регистрации</p>
+ </div>
 
-      <form id="leadForm">
-        <div class="fieldRow">
-          <div>
-            <label for="name">Имя</label>
-            <input id="name" name="name" placeholder="Например, Ангелина" required />
-          </div>
-          <div>
-            <label for="phone">Телефон</label>
-            <input id="phone" name="phone" placeholder="+48 ..." required />
-          </div>
-        </div>
+ <form id="leadForm">
+ <div class="fieldRow">
+ <div>
+ <label for="name">Имя</label>
+ <input id="name" name="name" placeholder="Например, Ангелина" required />
+ </div>
+ <div>
+ <label for="phone">Телефон</label>
+ <input id="phone" name="phone" placeholder="+48 ..." required />
+ </div>
+ </div>
 
-        <label for="orderService">Услуга</label>
-        <select id="orderService" name="service">
-          <option value="regular">Регулярная уборка</option>
-          <option value="general">Генеральная уборка</option>
-          <option value="renovation">После ремонта</option>
-          <option value="windows">Мойка окон</option>
-        </select>
+ <label for="orderService">Услуга</label>
+ <select id="orderService" name="service">
+ <option value="regular">Регулярная уборка</option>
+ <option value="general">Генеральная уборка</option>
+ <option value="renovation">После ремонта</option>
+ <option value="windows">Мойка окон</option>
+ </select>
 
-        <label for="comment">Комментарий (необязательно)</label>
-        <textarea id="comment" name="comment" placeholder="Площадь, адрес, удобное время..."></textarea>
+ <label for="comment">Комментарий (необязательно)</label>
+ <textarea id="comment" name="comment" placeholder="Площадь, адрес, удобное время..."></textarea>
 
-        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn primary" type="submit" id="submit_lead">Отправить</button>
-          <a class="btn" href="tel:+48123123123" id="cta_call">Позвонить</a>
-        </div>
+ <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+ <button class="btn primary" type="submit" id="submit_lead">Отправить</button>
+ <a class="btn" href="tel:+48123123123" id="cta_call">Позвонить</a>
+ </div>
 
-        <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
-      </form>
-    </div>
-  </section>
+ <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+ </form>
+ </div>
+ </section>
 </main>
 
 <footer>
-  <div class="container">
-    <div class="footerGrid">
-      <div class="smallprint">
-        <div style="font-weight:800;color:#e9eefc;">Fresh Breeze</div>
-        <div class="hr"></div>
-        <div>Клининговые услуги: регулярная, генеральная, после ремонта, мойка окон. Работаем по записи.</div>
-        <div style="margin-top:10px;">© 2025 Fresh Breeze. Учебный сайт.</div>
-      </div>
-      <div class="smallprint">
-        <div style="font-weight:700;color:#e9eefc;">Контакты</div>
-        <div class="hr"></div>
-        <div>Тел.: <a id="tel_link" href="tel:+48123123123" style="text-decoration:underline; text-underline-offset:3px;">+48 123 123 123</a></div>
-        <div>Email: <a href="mailto:hello@freshbreeze.example" style="text-decoration:underline; text-underline-offset:3px;">hello@freshbreeze.example</a></div>
-        <div style="margin-top:10px;color:rgba(185,196,229,.85);">Город: Варшава (пример)</div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="footerGrid">
+ <div class="smallprint">
+ <div style="font-weight:800;color:#e9eefc;">Fresh Breeze</div>
+ <div class="hr"></div>
+ <div>Клининговые услуги: регулярная, генеральная, после ремонта, мойка окон. Работаем по записи.</div>
+ <div style="margin-top:10px;">© 2025 Fresh Breeze. </div>
+ </div>
+ <div class="smallprint">
+ <div style="font-weight:700;color:#e9eefc;">Контакты</div>
+ <div class="hr"></div>
+ <div>Тел.: <a id="tel_link" href="tel:+48123123123" style="text-decoration:underline; text-underline-offset:3px;">+375 29 123-45-67</a></div>
+ <div>Email: <a href="mailto:hello@freshbreeze.by" style="text-decoration:underline; text-underline-offset:3px;">hello@freshbreeze.by</a></div>
+ <div style="margin-top:10px;color:rgba(185,196,229,.85);">Город: Минск</div>
+ </div>
+ </div>
+ </div>
 </footer>
 <script src="script.js"></script>
 </body>
