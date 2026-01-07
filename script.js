@@ -1,6 +1,53 @@
 (function () {
   const $ = (s) => document.querySelector(s);
 
+  // --- A/B test: CTA button text (no external services) ---
+const EXP_NAME = 'cta_text_v1';
+const EXP_KEY = 'fb_ab_' + EXP_NAME;
+
+function getVariant() {
+  let v = localStorage.getItem(EXP_KEY);
+  if (!v) {
+    v = Math.random() < 0.5 ? 'A' : 'B';
+    localStorage.setItem(EXP_KEY, v);
+  }
+  return v;
+}
+
+function gaEvent(name, params = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
+const variant = getVariant();
+
+gaEvent('ab_experiment_view', {
+  experiment_name: EXP_NAME,
+  experiment_variant: variant
+});
+
+if (variant === 'B') {
+  const ids = ['cta_top', 'cta_hero', 'cta_services', 'cta_try', 'cta_service_order'];
+  ids.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = 'Рассчитать стоимость';
+  });
+}
+
+['cta_top', 'cta_hero', 'cta_services', 'cta_try', 'cta_service_order'].forEach((id) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('click', () => {
+    gaEvent('cta_click', {
+      experiment_name: EXP_NAME,
+      experiment_variant: variant,
+      cta_id: id
+    });
+  });
+});
+
+
   // Highlight active nav item
   const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   document.querySelectorAll('[data-nav]').forEach(a => {
