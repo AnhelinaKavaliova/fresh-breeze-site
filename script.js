@@ -136,7 +136,15 @@ if (variant === 'B') {
           ? "Спасибо! Заявка принята. Мы свяжемся с вами в ближайшее время."
           : "Проверьте, пожалуйста, имя и телефон (минимум 2 и 6 символов).";
       }
-      if (ok) form.reset();
+      if (ok) {
+      gaEvent('lead_submit', {
+        experiment_name: EXP_NAME,
+        experiment_variant: variant,
+        page: document.body.getAttribute('data-page') || 'unknown'
+      });
+
+      form.reset();
+    }
     });
   }
 })();
